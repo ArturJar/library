@@ -1,3 +1,19 @@
-<p>
-  user-list works!
-</p>
+<h4>User list</h4>
+<div class="row">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <th>Login</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.login}}</td>
+        <td>{{user.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
