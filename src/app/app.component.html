@@ -1,19 +1,15 @@
-<h1>
-  {{title}}
-</h1>
-<p>Imię i nazwisko:{{name}} {{surname}}</p>
-<p>
-  Address:{{adress}}
-</p>
-<p>
-  Imię: {{name}}
-</p>
-<input [value]="name">
-<p>
-  Nazwisko: {{surname}}
-</p>
-<input #inputSurname [value]="surname" (keyup)="surname = inputSurname.value">
-<p>
-  Address: {{address}}
-</p>
-<input [(ngModel)]="address">
+<div class="page-header">
+  <h3>{{title}}</h3>
+</div>
+<div class="row">
+  <strong>Imię i nazwisko:</strong> {{name}} {{surname}} <strong>Adres:</strong> {{address}}
+</div>
+<div class="row">
+  Imię: <input [value]="name">
+</div>
+<div class="row">
+  Nazwisko: <input #inputSurname [value]="surname" (keyup)="surname = inputSurname.value">
+</div>
+<div class="row">
+  Adres: <input [(ngModel)]="address">
+</div>
