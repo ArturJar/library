@@ -10,9 +10,9 @@
 </p>
 <input [value]="name">
 <p>
-  Nazwisko:
+  Nazwisko: {{surname}}
 </p>
-<input>
+<input #inputSurname (keyup)="surname = inputSurname.value">
 <p>
   Address:
 </p>
