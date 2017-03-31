@@ -12,8 +12,8 @@
 <p>
   Nazwisko: {{surname}}
 </p>
-<input #inputSurname (keyup)="surname = inputSurname.value">
+<input #inputSurname [value]="surname" (keyup)="surname = inputSurname.value">
 <p>
-  Address:
+  Address: {{address}}
 </p>
-<input>
+<input [(ngModel)]="address">
