@@ -1,3 +1,6 @@
+<div *ngIf="selectedUser" class="row">
+  <p><strong>Selected user:</strong> {{selectedUser.name}}</p>
+</div>
 <h4>User list</h4>
 <div class="row">
   <table class="table table-bordered">
@@ -9,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users">
+      <tr *ngFor="let user of users" (click)="selectUser(user)">
         <td>{{user.id}}</td>
         <td>{{user.login}}</td>
         <td>{{user.name}}</td>
