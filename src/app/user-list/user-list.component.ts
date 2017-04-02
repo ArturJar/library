@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Enumerable from 'linq';
 
 import { User } from '../user';
 
@@ -28,5 +29,9 @@ export class UserListComponent implements OnInit {
     } else {
       this.selectedUser = user;
     }
+  }
+  addUserHandle(user: User) {
+    user.id = Enumerable.from(this.users).max(item => item.id) + 1;
+    this.users.push(user);
   }
 }
