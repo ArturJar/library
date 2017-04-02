@@ -8,7 +8,7 @@ import { User } from '../user';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-
+  selectedUser: User;
   users: User[] = [
     { id: 1, login: 'gabi89@o2.pl', name: 'Gabriel Hampton' },
     { id: 2, login: 'moski_kiski@tlen.pl', name: 'Moses Massey' },
@@ -22,4 +22,11 @@ export class UserListComponent implements OnInit {
   ngOnInit() {
   }
 
+  selectUser(user: User) {
+    if (this.selectedUser && user.id === this.selectedUser.id) {
+      this.selectedUser = undefined;
+    } else {
+      this.selectedUser = user;
+    }
+  }
 }
