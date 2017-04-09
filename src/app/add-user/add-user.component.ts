@@ -19,10 +19,6 @@ export class AddUserComponent implements OnInit {
   }
 
   add() {
-    let user = new User();
-    user.login = this.login;
-    user.name = this.name;
-    this.addUserHandler.emit(user);
     this.clearUserData();
   }
 
