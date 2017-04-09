@@ -8,12 +8,14 @@ import { UserListComponent } from './user-list/user-list.component';
 import { AddUserComponent } from './add-user/add-user.component';
 
 import { UserService } from './user.service';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    AddUserComponent
+    AddUserComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
