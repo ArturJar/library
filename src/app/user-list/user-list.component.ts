@@ -3,6 +3,8 @@ import * as Enumerable from 'linq';
 
 import { User } from '../user';
 
+import { UserService } from '../user.service';
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -10,10 +12,12 @@ import { User } from '../user';
 })
 export class UserListComponent implements OnInit {
   selectedUser: User;
+  users: User[];
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.getUsersSlowly().then(users => this.users = users);
   }
 
   selectUser(user: User) {

@@ -1,6 +1,6 @@
 <h4>User list</h4>
 <app-add-user></app-add-user>
-<div class="row">
+<div *ngIf="users; else loading" class="row">
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -18,3 +18,4 @@
     </tbody>
   </table>
 </div>
+<ng-template #loading>Loading...</ng-template>
