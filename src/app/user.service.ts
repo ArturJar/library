@@ -20,6 +20,9 @@ export class UserService {
   }
 
   create(login: string, name: string) {
-
+    let enumerableUsers = Enumerable.from(USERS);
+    let id = enumerableUsers.any() ? Enumerable.from(USERS).max(item => item.id) + 1 : 0;
+    USERS.push({ id, login, name });
+    return Promise.resolve(Enumerable.from(USERS).last());
   }
 }

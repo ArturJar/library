@@ -2,6 +2,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { User } from '../user';
 
+import { UserService } from '../user.service';
+
 @Component({
   selector: 'app-add-user',
   templateUrl: './add-user.component.html',
@@ -13,12 +15,14 @@ export class AddUserComponent implements OnInit {
 
   @Output() addUserHandler = new EventEmitter<User>();
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
 
   add() {
+    this.userService.create(this.login, this.name)
+      .then(user => this.addUserHandler.emit(user));
     this.clearUserData();
   }
 
