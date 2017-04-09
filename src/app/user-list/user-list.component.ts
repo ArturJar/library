@@ -27,4 +27,8 @@ export class UserListComponent implements OnInit {
       this.selectedUser = user;
     }
   }
+  handleDeleteUser() {
+    this.selectedUser = undefined;
+  }
+
 }

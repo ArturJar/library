@@ -25,4 +25,10 @@ export class UserService {
     USERS.push({ id, login, name });
     return Promise.resolve(Enumerable.from(USERS).last());
   }
+
+  delete(userId: number): Promise<User[]> {
+    let userToDelete = Enumerable.from(USERS).where(user => user.id === userId).firstOrDefault();
+    USERS.splice(USERS.indexOf(userToDelete), 1);
+    return Promise.resolve(USERS);
+  }
 }

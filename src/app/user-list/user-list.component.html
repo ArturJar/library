@@ -19,4 +19,4 @@
   </table>
 </div>
 <ng-template #loading>Loading...</ng-template>
-<app-user-details></app-user-details>
+<app-user-details *ngIf="selectedUser" [user]="selectedUser" (deleteUserHandler)="handleDeleteUser()"></app-user-details>
