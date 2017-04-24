@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { BookService } from '../book.service';
+import { Book } from '../book';
 
 @Component({
   selector: 'app-book-details',
@@ -6,10 +11,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-details.component.css']
 })
 export class BookDetailsComponent implements OnInit {
+  book: Book;
 
-  constructor() { }
+  constructor(private bookService: BookService,
+    private route: ActivatedRoute,
+    private location: Location) { }
+
 
   ngOnInit() {
+    this.route.params
+      .subscribe((params: Params) => this.bookService.getBook(+params['id']).then(book => this.book = book));
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 }

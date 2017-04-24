@@ -1,3 +1,19 @@
-<p>
-  book-details works!
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">{{book?.title}} details!</div>
+      <div class="panel-body">
+        <div>
+          <label>Title: </label> {{book?.title}}
+        </div>
+        <div>
+          <label>Author: </label> {{book?.author}}
+        </div>
+        <div>
+          <label>Identification Number: </label> {{book?.identificationNumber}}
+        </div>
+        <button (click)="goBack()">Back</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { BookListComponent } from './book-list/book-list.component';
 import { BookService } from './book.service';
@@ -10,7 +11,8 @@ export * from './book-details/book-details.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [
     BookListComponent,
