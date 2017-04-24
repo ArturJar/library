@@ -1,4 +1,75 @@
 {
+  "book list": {
+    "prefix": "meet-book-list",
+    "body": [
+      "<h4>Book list</h4>",
+      "<div class=\"row\">",
+      "<table class=\"table table-bordered\">",
+      "<thead>",
+      "<tr>",
+      "<td>Id</td>",
+      "<th>Title</th>",
+      "<th>Author</th>",
+      "<th>IdentificationNumber</th>",
+      "</tr>",
+      "</thead>",
+      "<tbody>",
+      "<tr *ngFor=\"let book of books\">",
+      "<td>{{book.id}}</td>",
+      "<td>{{book.title}}</td>",
+      "<td>{{book.author}}</td>",
+      "<td>{{book.identificationNumber}}</td>",
+      "</tr>",
+      "</tbody>",
+      "</table>",
+      "</div>"
+    ],
+    "description": "Adds html book list structure"
+  },
+  "book details": {
+    "prefix": "meet-book-details",
+    "body": [
+      "<div class=\"row\">",
+      "<div class=\"col-md-6\">",
+      "<div class=\"panel panel-primary\">",
+      "<div class=\"panel-heading\">{{book?.title}} details!</div>",
+      "<div class=\"panel-body\">",
+      "<div>",
+      "<label>Title: </label> {{book?.title}}",
+      "</div>",
+      "<div>",
+      "<label>Author: </label> {{book?.author}}",
+      "</div>",
+      "<div>",
+      "<label>Identification Number: </label> {{book?.identificationNumber}}",
+      "</div>",
+      "<button (click)=\"goBack()\">Back</button>",
+      "</div>",
+      "</div>",
+      "</div>",
+      "</div>"
+    ],
+    "description": "Adds book details html structure"
+  },
+  "nav bar": {
+    "prefix": "meet-nav-bar",
+    "body": [
+      "<nav class=\"navbar navbar-default\">",
+      "<div class=\"container-fluid\">",
+      "<div class=\"navbar-header\">",
+      "<a class=\"navbar-brand\" href=\"#\">Booktive!</a>",
+      "</div>",
+      "<div id=\"navbar\" class=\"navbar-collapse collapse\">",
+      "<ul class=\"nav navbar-nav\">",
+      "<li class=\"active\"><a href=\"#\">Users</a></li>",
+      "<li><a href=\"#\">Books</a></li>",
+      "</ul>",
+      "</div>",
+      "</div>",
+      "</nav>"
+    ],
+    "description": "Adds nav bar html structure"
+  },
   "basic binding": {
     "prefix": "meet-basic-binding",
     "body": [
