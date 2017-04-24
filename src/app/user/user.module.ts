@@ -8,6 +8,8 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { UserService } from './user.service';
 import { UserDetailsComponent } from './user-details/user-details.component';
 
+export * from './user-list/user-list.component';
+
 @NgModule({
   imports: [
     CommonModule,
