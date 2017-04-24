@@ -12,7 +12,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 const APPROUTES: Routes = [
   { path: 'users', component: UserListComponent },
-  { path: 'books', component: BookListComponent }
+  { path: 'books', component: BookListComponent },
+  { path: '', redirectTo: '/users', pathMatch: 'full' }
 ];
 
 @NgModule({
