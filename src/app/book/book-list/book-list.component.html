@@ -1,3 +1,21 @@
-<p>
-  book-list works!
-</p>
+<h4>Book list</h4>
+<div class="row">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <th>Title</th>
+        <th>Author</th>
+        <th>IdentificationNumber</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.identificationNumber}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
