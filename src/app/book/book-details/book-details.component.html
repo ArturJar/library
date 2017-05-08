@@ -4,15 +4,19 @@
       <div class="panel-heading">{{book?.title}} details!</div>
       <div class="panel-body">
         <div>
-          <label>Title: </label> {{book?.title}}
+          <label>Title: </label>
+          <input [(ngModel)]="book && book.title" class="form-control" />
         </div>
         <div>
-          <label>Author: </label> {{book?.author}}
+          <label>Author: </label>
+          <input [(ngModel)]="book && book.author" class="form-control" />
         </div>
         <div>
-          <label>Identification Number: </label> {{book?.identificationNumber}}
+          <label>Identification Number: </label>
+          <input [(ngModel)]="book && book.identificationNumber" class="form-control" />
         </div>
-        <button (click)="goBack()">Back</button>
+        <button class="btn btn-success" (click)="update()">Update</button>
+        <button class="btn btn-danger" (click)="goBack()">Back</button>
       </div>
     </div>
   </div>

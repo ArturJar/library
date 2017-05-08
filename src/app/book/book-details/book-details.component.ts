@@ -23,6 +23,11 @@ export class BookDetailsComponent implements OnInit {
       .subscribe((params: Params) => this.bookService.getBook(+params['id']).then(book => this.book = book));
   }
 
+  update(): void {
+    this.bookService.updateBook(this.book);
+    this.location.back();
+  }
+
   goBack(): void {
     this.location.back();
   }

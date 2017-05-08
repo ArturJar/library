@@ -21,4 +21,12 @@ export class BookService {
       .toPromise()
       .then(response => response.json().data);
   }
+
+  updateBook(book: Book) {
+    return this.http
+      .put('api/books/' + book.id, JSON.stringify(book))
+      .toPromise()
+      .then(() => book);
+  }
+
 }

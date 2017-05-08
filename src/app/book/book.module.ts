@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { BookListComponent } from './book-list/book-list.component';
 import { BookService } from './book.service';
@@ -12,7 +13,8 @@ export * from './book-details/book-details.component';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   declarations: [
     BookListComponent,
