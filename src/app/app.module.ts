@@ -35,7 +35,7 @@ const APPROUTES: Routes = [
     RouterModule.forRoot(APPROUTES),
     UserModule,
     BookModule,
-    InMemoryWebApiModule.forRoot(InMemoryBooksService)
+    InMemoryWebApiModule.forRoot(InMemoryBooksService, { delay: 2000 })
   ],
   providers: [],
   bootstrap: [AppComponent]
