@@ -114,6 +114,18 @@ git pull
 
 > Tą operację będziemy wykonywać przed każdym spotkaniem.
 
+### Moduł loan - propozycja wykonania
+
+1. przerobić mocka z userami tak żeby korzystał z in memory-web-api (sporo do zrobienia - warto się wzorować na book module)
+1. stworzyć moduł ‘loan’(ng g module loan)
+1. stworzyć klasę Loan(id, userId, bookId)
+1. zrobić mocka z 2-3 przykładowymi obiektami loan w in memory-web-api
+1. stworzyć service loan (ng g service loan) z metodą do pobierania danych: trudniejsza rzecz – trzeba pobrać przez api informacje z 3 kolekcji(i je ze sobą scalić – używając linq)
+1. stworzyć component z listą wypożyczeń(ng g component loan-list)
+1. dodać listę do routingu(navbar + routing module)
+1. skorzystać z service’u, żeby ją uzupełnić
+1. stworzyć component do dodawania wypożyczenia(ng g component add-loan)
+1. dodać component add-loan jako nested component
 
 [git]: <https://git-scm.com/download/>
 [vscode]: <https://code.visualstudio.com/>
