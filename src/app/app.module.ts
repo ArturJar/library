@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryBooksService } from './book/book.mock';
+
 import { UserModule, UserListComponent } from './user/user.module';
 import { BookModule, BookListComponent, BookDetailsComponent } from './book/book.module';
 
@@ -31,7 +34,8 @@ const APPROUTES: Routes = [
     HttpModule,
     RouterModule.forRoot(APPROUTES),
     UserModule,
-    BookModule
+    BookModule,
+    InMemoryWebApiModule.forRoot(InMemoryBooksService)
   ],
   providers: [],
   bootstrap: [AppComponent]
