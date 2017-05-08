@@ -1,18 +1,24 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+
+import 'rxjs/add/operator/toPromise';
+
 import { Book } from './book';
-import { BOOKS } from './book.mock';
-import * as Enumerable from 'linq';
 
 @Injectable()
 export class BookService {
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   getBooks(): Promise<Book[]> {
-    return Promise.resolve(BOOKS);
+    return this.http.get('api/books')
+      .toPromise()
+      .then(response => response.json().data);
   }
 
   getBook(id: number): Promise<Book> {
-    return Promise.resolve(Enumerable.from(BOOKS).first(item => item.id === id));
+    return this.http.get('api/books/' + id)
+      .toPromise()
+      .then(response => response.json().data);
   }
 }
