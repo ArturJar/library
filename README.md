@@ -126,9 +126,11 @@ git pull
 1. skorzystać z service’u, żeby ją uzupełnić
 1. stworzyć component do dodawania wypożyczenia(ng g component add-loan)
 1. dodać component add-loan jako nested component
+1. można skorzystać z: [Tour of heroes - http module][th-http]
 
 [git]: <https://git-scm.com/download/>
 [vscode]: <https://code.visualstudio.com/>
 [node.js]: <https://nodejs.org/>
 [fp]: <https://www.facebook.com/Grupa.NETBialystok>
 [fp-group]: <https://www.facebook.com/groups/200477320398470>
+[th-http]: <https://angular.io/docs/ts/latest/tutorial/toh-pt6.html>
