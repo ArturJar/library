@@ -1,4 +1,4 @@
-# Meet-ng2 - warsztaty Angular 2
+# Meet-ng2 - warsztaty Angular 2 - Artur Jarczewski
 
 Grupa .NET Politechniki Białostockiej we współpracy z firmą Intive zaprasza na serię warsztatów Angular 2. W tym miejscu znajdziecie wszystkie podstawowe informacje dotyczące aplikacji. Szczegółów dotyczących samych spotkań szukajcie na [fanpage'u Grupy .NET PB.][fp] oraz [Grupie .NET PB.][fp-group]
 
